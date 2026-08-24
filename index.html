@@ -16,8 +16,8 @@
   <div class="cursor-glow" aria-hidden="true"></div>
 
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="В начало">
-      <img src="assets/superheroes.png" alt="#СуперГерои" />
+    <a class="brand brand-wordmark" href="#top" aria-label="В начало">
+      <span class="brand-hash">#</span><span>СуперГерои</span><b>⚡</b>
     </a>
     <nav class="nav" aria-label="Навигация">
       <a href="#about">О событии</a>
@@ -52,7 +52,7 @@
 
       <div class="hero-visual reveal" data-delay="120">
         <div class="photo-card tilt-card">
-          <img src="assets/vologda.webp" alt="Вологда" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Cathedral_in_vologda_01.jpg/746px-Cathedral_in_vologda_01.jpg" alt="Архитектура Вологды" />
           <div class="photo-shade"></div>
           <div class="city-label">59.2205° N<br>39.8915° E</div>
           <div class="date-sticker">
@@ -60,7 +60,10 @@
             <small>ОКТ<br>2026</small>
           </div>
         </div>
-        <img class="session-badge floating" src="assets/business-session.png" alt="Business Session" />
+        <div class="session-badge floating" aria-label="Business Session">
+          <span class="session-word">Business</span>
+          <span class="session-word session-word-two">Session</span>
+        </div>
         <div class="scribble scribble-one">⚡</div>
       </div>
     </section>
@@ -143,7 +146,7 @@
           <a class="text-link" href="https://t.me/tamuna_beauty" target="_blank" rel="noreferrer">Получить детали в Telegram ↗</a>
         </div>
         <div class="location-photo">
-          <img src="assets/vologda.webp" alt="Архитектура Вологды" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Cathedral_in_vologda_01.jpg/746px-Cathedral_in_vologda_01.jpg" alt="Архитектура Вологды" />
           <div class="location-tag">VOLOGDA / RUSSIA</div>
         </div>
       </div>
@@ -161,9 +164,10 @@
   </main>
 
   <footer class="footer">
-    <img src="assets/superheroes.png" alt="#СуперГерои" />
+    <div class="brand-wordmark footer-brand"><span class="brand-hash">#</span><span>СуперГерои</span><b>⚡</b></div>
     <p>BUSINESS SESSION · ВОЛОГДА · 10.10.2026</p>
     <p>#Greenway &amp; #СуперГерои — с нами легко!</p>
+    <small class="photo-credit">Фото Вологды: Alexey Yagovkin / Wikimedia Commons, CC BY-SA 4.0</small>
   </footer>
 
   <script src="script.js"></script>
