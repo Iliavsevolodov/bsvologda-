@@ -50,19 +50,6 @@ if (glow && matchMedia('(pointer:fine)').matches) {
   }, { passive: true });
 }
 
-const tilt = document.querySelector('.tilt-card');
-if (tilt && matchMedia('(pointer:fine)').matches) {
-  tilt.addEventListener('pointermove', (event) => {
-    const rect = tilt.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - 0.5;
-    const y = (event.clientY - rect.top) / rect.height - 0.5;
-    tilt.style.transform = `rotate(2deg) perspective(900px) rotateY(${x * 5}deg) rotateX(${y * -5}deg)`;
-  });
-  tilt.addEventListener('pointerleave', () => {
-    tilt.style.transform = 'rotate(2deg) perspective(900px) rotateY(0deg) rotateX(0deg)';
-  });
-}
-
 const magneticItems = document.querySelectorAll('.magnetic');
 if (matchMedia('(pointer:fine)').matches) {
   magneticItems.forEach((item) => {
@@ -70,8 +57,9 @@ if (matchMedia('(pointer:fine)').matches) {
       const rect = item.getBoundingClientRect();
       const x = event.clientX - rect.left - rect.width / 2;
       const y = event.clientY - rect.top - rect.height / 2;
-      item.style.transform = `translate(${x * 0.08}px, ${y * 0.08}px)`;
+      item.style.transform = `translate(${x * 0.04}px, ${y * 0.04}px)`;
     });
+
     item.addEventListener('pointerleave', () => {
       item.style.transform = '';
     });
