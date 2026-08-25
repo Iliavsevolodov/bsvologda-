@@ -1,0 +1,39 @@
+/* Clean base before replacing decorative motifs with image assets */
+.hero::before,
+.about::before,
+.tickets::before,
+.afterparty::before,
+.final-inner::after {
+  content: none !important;
+  display: none !important;
+}
+
+.lace,
+.lace-a,
+.lace-b,
+.carved-frame,
+.program-ornament,
+.vologda-stamp,
+.lightning,
+.afterparty-art,
+.estate-card,
+.estate-sky,
+.estate-house,
+.estate-path {
+  display: none !important;
+}
+
+.afterparty-clean {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+.afterparty-clean .afterparty-copy {
+  width: min(100%, 920px);
+  max-width: 920px;
+}
+
+@media (max-width: 760px) {
+  .afterparty-clean {
+    display: block !important;
+  }
+}
